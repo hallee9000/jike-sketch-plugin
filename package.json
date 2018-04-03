@@ -5,9 +5,9 @@
     "sketch": ">=3.0"
   },
   "skpm": {
-    "name": "sketch",
+    "name": "ojbk",
     "manifest": "src/manifest.json",
-    "main": "plugin.sketchplugin"
+    "main": "ojbk.sketchplugin"
   },
   "scripts": {
     "build": "skpm-build",
