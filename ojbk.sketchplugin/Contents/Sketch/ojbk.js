@@ -434,6 +434,10 @@ var fetch = __webpack_require__(12);
 // 让用户输入连接
 function confirmLink(callback) {
   var link = UI.getStringFromUser("请输入主题链接", 'https://m.okjike.com/topics/56e3e4a2b227d41100fe5dba');
+  if (link.indexOf('https://m.okjike.com/topics/') < 0) {
+    UI.message('输入的链接必须以“https://m.okjike.com/topics/”开头。');
+    return;
+  }
   var topicId = link.split('topics/')[1].split('?')[0];
   fetchFeed(topicId, callback);
 }
